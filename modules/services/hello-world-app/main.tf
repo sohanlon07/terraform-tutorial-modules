@@ -10,6 +10,11 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-2"
+}
+
+
 module "asg" {
   source = "../../cluster/asg-rolling-deploy"
 
